@@ -1,0 +1,360 @@
+* {
+    margin: 0; /* Supprime les marges par défaut de tous les éléments */
+    padding: 0; /* Supprime les espacements internes par défaut de tous les éléments */
+    box-sizing: border-box; /* Inclut les bordures et marges dans le calcul de la taille totale */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Utilisation de Roboto pour une lecture plus fluide */
+    line-height: 1.8; /* Augmente l'espacement entre les lignes du texte pour une meilleure lisibilité */
+    background-color: #1b1e1f; /* Arrière-plan sombre */
+    color: #d6d4d4; /* Couleur du texte en blanc */
+}
+
+.container {
+    width: 85%; /* Augmente la largeur de la section à 85% de l'écran */
+    margin: auto; /* Centre les éléments horizontalement */
+    overflow: hidden; /* Empêche les débordements d'éléments dans les conteneurs */
+}
+
+header {
+    background-color: #1a3c44; /* Arrière-plan sombre */
+    color: #fff; /* Texte blanc pour un bon contraste */
+    padding: 20px 0; /* Espacement vertical de l'en-tête */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile sous l'en-tête pour ajouter de la profondeur */
+    position: relative; /* Position normale pour que le header suive le scroll */
+    transition: top 0.3s; /* Transition pour la fluidité du changement */
+}
+
+header.sticky {
+    position: fixed; /* Fixe le header en haut lorsqu'on défile */
+    top: 0; /* Le place en haut de la page */
+    width: 100%; /* Prend toute la largeur de la fenêtre */
+    z-index: 1000; /* S'assure que le header reste au-dessus des autres éléments */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée pour donner de la profondeur */
+}
+
+header h1 {
+    text-align: center; /* Centre le titre de l'en-tête */
+    font-size: 2.5rem; /* Augmente la taille du titre pour plus de visibilité */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+nav ul {
+    list-style: none; /* Supprime les puces des éléments de la liste de navigation */
+    text-align: center; /* Centre la navigation */
+}
+
+nav ul li {
+    display: inline; /* Affiche les éléments de la liste sur une seule ligne */
+    margin: 0 20px; /* Espacement entre chaque lien de navigation */
+}
+
+nav ul li a {
+    color: #fff; /* Couleur des liens de navigation (blanc) */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-weight: bold; /* Liens en gras */
+    transition: color 0.3s ease; /* Animation pour la couleur des liens */
+}
+
+nav ul li a:hover {
+    color: #1abc9c; /* Couleur verte lors du survol */
+}
+
+.section {
+    padding: 40px 0; /* Ajoute un espacement vertical plus important pour aérer chaque section */
+}
+
+h2 {
+    text-align: center; /* Centre les sous-titres des sections */
+    margin-bottom: 30px; /* Augmente l'espacement sous les sous-titres */
+    color: #fff; /* Texte en blanc pour les sous-titres */
+    font-size: 2rem; /* Augmente la taille du texte pour les titres de sections */
+    text-transform: uppercase; /* Met les titres en majuscules pour une meilleure hiérarchie */
+    letter-spacing: 1px; /* Espace entre les lettres pour un effet de style */
+}
+
+ul {
+    list-style: none; /* Supprime les puces des listes */
+    padding: 0; /* Supprime les marges internes */
+}
+
+ul li {
+    background-color: #2c3e50; /* Fond sombre pour les éléments de liste */
+    margin: 10px 0; /* Ajoute un espacement vertical entre les éléments */
+    padding: 15px; /* Espacement interne des éléments */
+    border-radius: 8px; /* Coins arrondis pour un aspect plus doux */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'effet de profondeur */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Effet de survol */
+}
+
+ul li:hover {
+    background-color: #1abc9c; /* Changement de couleur au survol */
+    transform: scale(1.03); /* Effet de zoom au survol */
+}
+
+.project {
+    background-color: #34495e; /* Fond sombre pour chaque projet */
+    padding: 20px; /* Espacement interne plus généreux */
+    margin-bottom: 25px; /* Espacement vertical sous chaque projet */
+    border-radius: 8px; /* Coins arrondis pour chaque projet */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre plus marquée pour un effet de profondeur */
+}
+
+footer {
+    background-color: #1b1e1f; /* Arrière-plan sombre */
+    color: #fff; /* Texte blanc */
+    text-align: center; /* Centre le texte du pied de page */
+    padding: 15px 0; /* Espacement vertical */
+    margin-top: 50px; /* Ajoute un espacement au-dessus du pied de page */
+    font-size: 1.1rem; /* Taille de texte un peu plus grande */
+}
+
+.skills-category {
+    margin-bottom: 40px; /* Espacement plus grand entre les catégories de compétences */
+}
+
+.skills-list {
+    display: flex; /* Affiche les compétences sur une ligne */
+    justify-content: center; /* Centre les compétences horizontalement */
+    gap: 25px; /* Plus d'espace entre chaque compétence */
+    flex-wrap: wrap; /* Permet aux compétences de se réorganiser sur plusieurs lignes si nécessaire */
+}
+
+.skill {
+    display: flex;
+    flex-direction: column; /* Logo au-dessus du texte */
+    align-items: center; /* Centre le contenu */
+    background-color: #34495e; /* Fond sombre pour les compétences */
+    padding: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Ombre subtile */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition pour effet de survol */
+}
+
+.skill img {
+    width: 120px; /* Augmente la taille des logos */
+    height: 100px;
+    margin-bottom: 20px; /* Espace sous les logos */
+}
+
+.skill p {
+    color: #fff; /* Texte blanc */
+    font-weight: bold; /* Texte en gras */
+    margin: 0;
+    text-align: center;
+}
+
+.skill:hover {
+    transform: scale(1.1); /* Effet zoom au survol */
+    background-color: #1abc9c; /* Changement de couleur au survol */
+}
+
+h2 {
+    text-align: left;
+    color: #1abc9c; /* Couleur douce pour les titres */
+    margin-bottom: 30px; /* Espacement sous le titre principal */
+    font-family: 'Gotham', sans-serif; /* Police personnalisée */
+    font-size: 2rem;
+    text-transform: uppercase; /* Met les titres en majuscules */
+}
+
+/*----------- Certification -----------*/
+
+.certif-container {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments horizontalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 30px; /* Espace entre chaque image */
+    flex-wrap: wrap; /* Les images se replient si l'écran est trop petit */
+    padding: 30px 0; /* Ajoute un peu d'espace autour du conteneur */
+}
+
+.certif {
+    display: flex; /* Chaque image est un élément flex */
+    align-items: center; /* Centre les images verticalement */
+    justify-content: center; /* Centre le contenu (image) horizontalement */
+    padding: 15px;
+    border-radius: 12px; /* Coins arrondis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition sur le hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.certif img {
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
+    height: auto; /* Ajuste la hauteur pour garder les proportions */
+    max-height: 250px; /* Limite la hauteur maximale des images */
+}
+
+.certif:hover {
+    transform: scale(1.05); /* Effet de zoom léger sur l'image */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Ombre plus marquée au survol */
+}
+
+/*----------- Fin Certification -----------*/
+
+/* ------------Section BTS SIO ---------------*/
+#bts-sio {
+    background-color: #2c3e50; /* Fond sombre */
+    color: #d6d4d4; /* Texte clair */
+    padding: 60px 0; /* Espacement vertical plus grand pour une présentation aérée */
+}
+
+#bts-sio h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1abc9c; /* Couleur d'accent */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.specialties {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.specialty {
+    background-color: #34495e; /* Fond pour chaque spécialité */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 48%; /* Prend la moitié de l'espace (s'adapte aux petits écrans) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specialty:hover {
+    transform: scale(1.03); /* Effet de zoom léger */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+.specialty h3 {
+    color: #1abc9c; /* Titre de la spécialité */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.specialty ul {
+    list-style: none;
+    padding: 0;
+}
+
+.specialty ul li {
+    background-color: #2c3e50;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.specialty ul li:hover {
+    background-color: #1abc9c;
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .specialties {
+        flex-direction: column; /* En mode mobile, les sections se mettent en colonne */
+    }
+
+    .specialty {
+        width: 100%; /* Prend toute la largeur sur petits écrans */
+    }
+}
+/* ------------FIN Section BTS SIO ---------------*/
+
+
+.project-link {
+    color: #1abc9c; /* Utilisation de la couleur d'accent */
+    font-weight: bold; /* Texte en gras pour les liens */
+    text-decoration: none; /* Supprime le soulignement */
+    display: inline-block; /* S'assure que le lien est traité comme un bloc, mais pas trop grand */
+    margin-top: 10px; /* Espacement autour du lien */
+    padding: 8px 16px; /* Ajouter un peu de padding autour du lien */
+    border: 2px solid #1abc9c; /* Bordure autour du lien pour plus de visibilité */
+    border-radius: 4px; /* Coins arrondis pour un meilleur look */
+}
+
+.project-link:hover {
+    background-color: #1abc9c; /* Changement de fond au survol */
+    color: #fff; /* Change la couleur du texte lors du survol */
+}
+
+/* ----------- Section Stage ----------- */
+#stage {
+    background-color: #34495e; /* Fond sombre similaire à celui des projets et compétences */
+    color: #fff; /* Texte clair */
+    padding: 60px 0; /* Espacement vertical plus grand pour une présentation aérée */
+}
+
+#stage h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1abc9c; /* Couleur d'accent */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stage-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stage {
+    background-color: #2c3e50; /* Fond pour chaque stage */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 48%; /* Prend la moitié de l'espace (s'adapte aux petits écrans) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stage:hover {
+    transform: scale(1.03); /* Effet de zoom léger */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+.stage h3 {
+    color: #1abc9c; /* Titre du stage */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.stage-duration {
+    font-style: italic; /* Style pour la période du stage */
+    margin-bottom: 15px;
+}
+
+.stage-description {
+    margin-bottom: 20px;
+}
+
+.stage-link {
+    color: #1abc9c; /* Couleur d'accent */
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #1abc9c;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.stage-link:hover {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stage {
+        width: 100%; /* Les stages prennent toute la largeur sur les petits écrans */
+    }
+}
